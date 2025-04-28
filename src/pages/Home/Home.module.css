@@ -1,0 +1,35 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* opcional para prevenir overflow */
+  padding: 20px; /* opcional para dar respiro */
+}
+
+.home img {
+  height: 550px;
+  max-width: 100%; /* MUITO IMPORTANTE para imagem não estourar */
+}
+
+.home p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home img {
+    height: auto; /* Deixa a imagem responsiva */
+    width: 80%;
+    max-width: 300px; /* limita para não ficar gigante */
+    margin-top: 20px;
+  }
+}

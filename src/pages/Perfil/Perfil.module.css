@@ -1,0 +1,50 @@
+.perfilContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfilContainer h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.infoValue {
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .perfilContainer {
+    padding: 1rem;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,15 @@
+
+.container {
+  width: 100%;
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: 1rem;
+  gap: 1rem;
+
+  padding-top: 120px; 
+  padding-bottom: 90px; /* AQUI É POSSÍVEL FAZER A COMPENSAÇÃO DO CONTAINER EM CADA PÁGINA NA PARTE INFERIOR */
+}

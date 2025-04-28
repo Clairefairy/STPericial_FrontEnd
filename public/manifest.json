@@ -1,0 +1,53 @@
+{
+  "theme_color":"#2563eb",
+  "background_color":"#f2f2f2",
+  "icons":[
+      {
+          "purpose":"maskable",
+          "sizes":"512x512",
+          "src":"/icons/icon512_maskable.png",
+          "type":"image/png"
+      },
+      {
+          "purpose":"any",
+          "sizes":"512x512",
+          "src":"/icons/icon512_rounded.png",
+          "type":"image/png"
+      },
+      {
+          "purpose": "any",
+          "sizes": "192x192",
+          "src": "/icons/192.png",
+          "type": "image/png"
+      },
+      {
+          "purpose": "any",
+          "sizes": "144x144",
+          "src": "/icons/144.png",
+          "type": "image/png"
+      }
+  ],
+  "screenshots": [
+      {
+          "src": "/icons/screenshotdesktop.png",
+          "type": "image/jpg",
+          "sizes": "1920x1080",
+          "form_factor": "wide"
+        },
+        {
+          "src": "/icons/screenshotmobile.png",
+          "type": "image/jpg",
+          "sizes": "484x807",
+          "form_factor": "narrow"
+        }
+  ],
+  "orientation":"any",
+  "display":"standalone",
+  "dir":"auto",
+  "lang":"pt-BR",
+  "description":"Gestão de processos de perícia odontológica",
+  "start_url":"/index.html",
+  "name":"STPericial",
+  "short_name":"STPericial",
+  "scope": "/"
+}

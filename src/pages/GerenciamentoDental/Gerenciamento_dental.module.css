@@ -1,0 +1,257 @@
+/* Gerenciamento_casos.module.css */
+
+/* Container Principal */
+.gerenciamentoCasos {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+      min-width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* <- aqui! evita scroll horizontal no container */
+}
+
+/* Header Section */
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+/* Botão Adicionar Caso */
+.adicionarWrapper {
+  margin-top: 1.5rem;
+}
+
+.adicionarCaso {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.adicionarCaso:hover {
+  background-color: #3a5a80;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+      min-width: 100%;
+  max-width: 100%;
+}
+
+.table {
+  width: auto; /* Deixa a tabela ocupar o tamanho natural dela */
+  min-width: 100%; /* Mas força no mínimo a ocupar toda a largura disponível */
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Botões de Ação */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.editar, .excluir, .laudoButton {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.editar {
+  background-color: #3498db;
+  color: white;
+}
+
+.editar:hover {
+  background-color: #2980b9;
+}
+
+.excluir {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.excluir:hover {
+  background-color: #c0392b;
+}
+
+.laudoButton {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.laudoButton:hover {
+  background-color: #27ae60;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  gap: 1rem;
+  color: #2563eb;
+}
+
+.loadingIcon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.errorContainer {
+  padding: 2rem;
+  text-align: center;
+  color: #e74c3c;
+}
+
+/* Modal de Confirmação */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmPopup {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirmPopup h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.confirmPopup p {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.confirmButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.confirmButton {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+}
+
+.cancel:hover {
+  background-color: #eaeaea;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .gerenciamentoCasos {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .editar, .excluir, .laudoButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .table th, .table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .confirmButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .confirmButton {
+    width: 100%;
+  }
+}

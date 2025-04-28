@@ -1,0 +1,152 @@
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.removeArrayButton{
+  color: white;
+  background-color: #f44336;
+  border:none;
+  border-radius: 0.5rem;
+  width: 2rem;
+  height:2rem;
+  font-size: 1.3rem;
+  margin-left:1rem;
+}
+
+.arrayItems{
+  margin-top: 1rem;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form textarea,
+.form select {
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttons button[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+}
+
+.buttons button[type='submit']:disabled {
+  background-color: #ccc;
+  color: white;
+}
+
+.buttons button[type='button'] {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilos atualizados para o popup de vítima */
+.victimPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.victimPopup {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 40rem; /* 40rem como solicitado */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.victimPopup h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    color: #333;
+}
+
+.victimContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap:wrap
+}
+
+.addButton {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2196F3;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #0b7dda;
+}
+
+/* Ajustes para os inputs no popup */
+.victimPopup .form input,
+.victimPopup .form select,
+.victimPopup .form textarea {
+    padding: 0.6rem;
+    font-size: 1.05rem;
+    border: 1px solid #ddd;
+}
+
+.victimPopup .form textarea {
+    min-height: 120px;
+}
+
+.victimPopup .buttons {
+    margin-top: 2rem;
+}

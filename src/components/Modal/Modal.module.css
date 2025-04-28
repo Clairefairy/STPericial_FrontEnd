@@ -1,0 +1,58 @@
+.modalBackdrop {
+  position: fixed; /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* garante que fique acima de tudo */
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modalImage {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.leiaMais {
+  display: inline-block;
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaço acima do conjunto de botões */
+}
+
+.modalContent button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modalContent button:hover {
+  background-color: #0f285e;
+}

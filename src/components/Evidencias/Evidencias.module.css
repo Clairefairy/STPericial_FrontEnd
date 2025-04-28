@@ -1,0 +1,73 @@
+.evidenciasContainer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputFile {
+  margin-bottom: 20px;
+}
+
+.mensagemSucesso {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #c3e6cb;
+}
+
+.mensagemErro {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 140px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.preview {
+  width: 100%;
+  height: 80px; /* imagem reduzida */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.nomeArquivo {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #333;
+  word-break: break-word;
+}
+
+.botaoRemover {
+  margin-top: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botaoRemover:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,155 @@
+.artigos {
+  margin-top: 90px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Primeira div */
+.divTextoImagem {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.imageArea {
+  flex: 1;
+  max-width: 400px; /* Limita o tamanho da imagem */
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adiciona profundidade */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.image:hover {
+  transform: scale(1.05); /* Amplia levemente no hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.textArea {
+  flex: 2;
+  min-width: 300px;
+}
+
+.textArea h2 {
+  font-size: 32px;
+  color: #2c3e50;
+}
+
+.textArea p {
+  font-size: 18px;
+  color: #34495e;
+  line-height: 1.6; /* Melhor espaçamento entre as linhas */
+}
+
+/* Segunda div */
+.divArtigos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.miniArtigo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miniArtigo:hover {
+  transform: translateY(-5px); /* Move levemente para cima no hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.miniImage {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.expandButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
+}
+
+.expandButton:hover {
+  background-color: rgb(28, 90, 55);
+  transform: scale(1.05); /* Botão cresce levemente no hover */
+}
+
+.buttonContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Título Notícias */
+.tituloNoticias {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o título */
+}
+
+/* Terceira div */
+.divUltimasNoticias {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.noticia {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+  transform: translateY(-5px); /* Elevação sutil no hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.noticiaImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Adiciona efeito suave */
+}
+
+.noticiaImage:hover {
+  transform: scale(1.1); /* Amplitude leve no hover */
+}
+
+.noticiaText h3 {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.noticiaText p {
+  font-size: 16px;
+  color: #34495e;
+}

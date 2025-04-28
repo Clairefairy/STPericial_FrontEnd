@@ -1,0 +1,19 @@
+.titulo2 {
+  padding-top: 2rem;
+}
+.textos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.texto_grande,
+.texto_pag_N_localizada {
+  font-size: 200px;
+  color: rgb(28, 90, 55);
+  font-weight: bold;
+}
+/* AQUI EU SUBSCREVO O FONT-SIZE --> ALGO ESPECÍFICO */
+.texto_pag_N_localizada {
+  font-size: 1.5rem;
+}

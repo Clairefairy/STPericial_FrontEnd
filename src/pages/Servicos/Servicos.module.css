@@ -1,0 +1,60 @@
+.servicos {
+  margin-top: 90px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.titulo {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.descricao {
+  font-size: 18px;
+  color: #34495e;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Centraliza o texto e adiciona espaçamento inferior */
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.topico {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.topico h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.topico p {
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.lista {
+  padding-left: 20px; /* Adiciona recuo às listas */
+  list-style: disc; /* Adiciona marcador */
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.6;
+}
