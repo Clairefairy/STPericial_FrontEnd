@@ -76,7 +76,7 @@ STPericial_FrontEnd/
 ## 👨‍💻 Equipe
 
 - **Clara Félix** — [@Clairefairy](https://github.com/Clairefairy)
-- **Felipe Pimentel** — [@seu-usuario](https://github.com/seu-usuario)
+- **Felipe Pimentel** — [@fpPrazeres](https://github.com/fpPrazeres)
 - **Rebeca Lyra** — [@RebecaLyra](https://github.com/RebecaLyra)
 - **Ricardo Tompson** — [@RicardoTompson](https://github.com/RicardoTompson)
 - **Tales Machado** — [@TalesMachadoBandeira](https://github.com/TalesMachadoBandeira)
