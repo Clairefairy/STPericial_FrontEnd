@@ -71,7 +71,7 @@
 
 .inputGroup .icon {
   font-size: 20px;
-  color: var(--primary-color); /* Ícones de usuário e senha em verde */
+  color: var(--primary-color); 
 }
 
 .input {
@@ -152,9 +152,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Ícones das redes sociais */
+
 .socialButton .icon {
-  color: inherit; /* Os ícones herdam a cor do botão pai */
+  color: inherit; 
 }
 
 .facebook {
@@ -162,7 +162,7 @@
 }
 
 .facebook .icon {
-  color: white; /* Ícone branco no Facebook */
+  color: white; 
 }
 
 .facebook:hover {
@@ -176,7 +176,7 @@
 }
 
 .google .icon {
-  color: var(--google-color); /* Ícone vermelho no Google */
+  color: var(--google-color); 
 }
 
 .google:hover {
@@ -189,7 +189,7 @@
 }
 
 .apple .icon {
-  color: white; /* Ícone branco na Apple */
+  color: white; 
 }
 
 .apple:hover {

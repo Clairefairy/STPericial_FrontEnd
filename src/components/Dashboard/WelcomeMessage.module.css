@@ -9,15 +9,15 @@
 .title {
   font-size: 20px;
   font-weight: 600;
-  color: #1f2937; /* text-gray-900 */
+  color: #1f2937; 
 }
 
 .highlight {
-  color: #2563eb; /* text-blue-600 */
+  color: #2563eb; 
 }
 
 .subtitle {
   margin-top: 8px;
   font-size: 14px;
-  color: #4b5563; /* text-gray-600 */
+  color: #4b5563; 
 }

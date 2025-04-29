@@ -1,13 +1,13 @@
-/* status.module.css */
 
-/* Estilo básico do select */
+
+
 .select {
   padding: 0.7rem;
   font-size: 1rem;
   border-radius:1rem;
   border: 1px solid #ccc;
   cursor: pointer;
-  background-color: white; /* Cor de fundo do select */
+  background-color: white; 
   transition: background-color 0.3s ease;
 }
 
@@ -19,18 +19,18 @@
 
 
 .selectEmAndamento {
-  background-color: #f0ad4e; /* Cor para "Em andamento" */
+  background-color: #f0ad4e; 
 }
 
 .selectFinalizado {
-  background-color: #5bc0de; /* Cor para "Finalizado" */
+  background-color: #5bc0de; 
 }
 
 .selectArquivado {
-  background-color: #d9534f; /* Cor para "Arquivado" */
+  background-color: #d9534f; 
 }
 
-/* Removendo o hover cinza padrão do select */
+
 .select:hover {
   border-color: #888;
 }
@@ -40,7 +40,7 @@
   outline: none;
 }
 
-/* Estilo do select quando está desabilitado */
+
 .select:disabled {
   background-color: #e9ecef;
   cursor: not-allowed;

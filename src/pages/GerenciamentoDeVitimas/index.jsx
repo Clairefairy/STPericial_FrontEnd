@@ -134,9 +134,9 @@ function Gerenciamento_vitimas() {
                 {vitimas.map((vitima) => (
                   <tr key={vitima._id}>
                     <td>{vitima.name}</td>
-                    <td>{vitima.sex}</td>
+                    <td>{vitima.sex || "Sem genero registrado"} </td>
                     <td>{formatarData(vitima.dateBirth)}</td>
-                    <td>{vitima.identification}</td>
+                    <td>{vitima.identification || "Sem Identificação"}</td>
                     <td>{vitima.identified ? "Sim" : "Não"}</td>
                     <td className={styles.descricaoCell}>{vitima.observations || "-"}</td>
                     <td>{vitima._id}</td>

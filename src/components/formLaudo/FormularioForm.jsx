@@ -1,8 +1,9 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, useMemo } from 'react';
 import styles from './FormularioFormCss.module.css';
 import { AuthContext } from '../../util/UserContext';
 import { cadastrar, atualizar, buscar } from '../../util/service';
 import toast from 'react-hot-toast';
+import Select from 'react-select';
 
 export default function LaudoForm({ onClose, onSubmit, laudoParaEditar }) {
     const { usuario } = useContext(AuthContext);
@@ -15,6 +16,17 @@ export default function LaudoForm({ onClose, onSubmit, laudoParaEditar }) {
         description: '',
         evidence: ''
     });
+
+    const evidenciasOptions = useMemo(() => {
+        return evidencias.map(evidencia => ({
+            value: evidencia._id,
+            label: `${evidencia.type} - ${evidencia.text || 'Sem descrição'} (${new Date(evidencia.collectionDate).toLocaleDateString()}) - ${evidencia._id}`
+        }));
+    }, [evidencias]);
+
+    const selectedOption = useMemo(() => {
+        return evidenciasOptions.find(option => option.value === formData.evidence) || null;
+    }, [formData.evidence, evidenciasOptions]);
 
     useEffect(() => {
         const carregarEvidencias = async () => {
@@ -36,7 +48,6 @@ export default function LaudoForm({ onClose, onSubmit, laudoParaEditar }) {
         carregarEvidencias();
     }, [usuario.token]);
 
-    // Preenche os dados se for edição
     useEffect(() => {
         if (laudoParaEditar) {
             setFormData({
@@ -50,6 +61,13 @@ export default function LaudoForm({ onClose, onSubmit, laudoParaEditar }) {
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+    }
+
+    function handleEvidenceChange(selectedOption) {
+        setFormData({
+            ...formData,
+            evidence: selectedOption ? selectedOption.value : ''
+        });
     }
 
     async function handleSubmit(e) {
@@ -129,20 +147,19 @@ export default function LaudoForm({ onClose, onSubmit, laudoParaEditar }) {
                         {loadingEvidencias ? (
                             <p>Carregando evidências...</p>
                         ) : (
-                            <select
+                            <Select
                                 name="evidence"
-                                value={formData.evidence}
-                                onChange={handleChange}
+                                value={selectedOption}
+                                onChange={handleEvidenceChange}
+                                options={evidenciasOptions}
+                                isSearchable
+                                placeholder="Selecione ou pesquise uma evidência..."
+                                noOptionsMessage={() => "Nenhuma evidência encontrada"}
+                                loadingMessage={() => "Carregando..."}
+                                className={styles.reactSelectContainer}
+                                classNamePrefix="react-select"
                                 required
-                                className={styles.select}
-                            >
-                                <option value="">Selecione uma evidência</option>
-                                {evidencias.map((evidencia) => (
-                                    <option key={evidencia._id} value={evidencia._id}>
-                                        {`${evidencia.type} - ${evidencia.text || 'Sem descrição'} (${new Date(evidencia.collectionDate).toLocaleDateString()})`}
-                                    </option>
-                                ))}
-                            </select>
+                            />
                         )}
                     </label>
                 </div>

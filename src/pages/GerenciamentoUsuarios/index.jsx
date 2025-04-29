@@ -164,12 +164,16 @@ function Gerenciamento_Usuarios() {
                           >
                             Editar
                           </button>
-                          <button
-                            className={styles.excluir}
-                            onClick={() => handleDeleteClick(user._id)}
-                          >
-                            Excluir
-                          </button>
+
+                          {usuario.user.email !== user.email &&
+                            <button
+                              className={styles.excluir}
+                              onClick={() => handleDeleteClick(user._id)}
+                            >
+                              Excluir
+                            </button>
+                          }
+                         
                         </>
                       )}
                     </td>

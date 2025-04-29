@@ -17,7 +17,7 @@
   line-height: 1.6;
   text-align: justify;
   max-width: 800px;
-  margin: 0 auto 40px; /* Centraliza o texto e adiciona espaçamento inferior */
+  margin: 0 auto 40px; 
 }
 
 .conteudo {
@@ -52,8 +52,8 @@
 }
 
 .lista {
-  padding-left: 20px; /* Adiciona recuo às listas */
-  list-style: disc; /* Adiciona marcador */
+  padding-left: 20px; 
+  list-style: disc; 
   font-size: 16px;
   color: #34495e;
   line-height: 1.6;

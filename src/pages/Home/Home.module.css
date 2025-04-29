@@ -5,13 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap; /* opcional para prevenir overflow */
-  padding: 20px; /* opcional para dar respiro */
+  flex-wrap: wrap; 
+  padding: 20px; 
 }
 
 .home img {
   height: 550px;
-  max-width: 100%; /* MUITO IMPORTANTE para imagem não estourar */
+  max-width: 100%; 
 }
 
 .home p {
@@ -27,9 +27,9 @@
   }
 
   .home img {
-    height: auto; /* Deixa a imagem responsiva */
+    height: auto; 
     width: 80%;
-    max-width: 300px; /* limita para não ficar gigante */
+    max-width: 300px; 
     margin-top: 20px;
   }
 }

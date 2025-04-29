@@ -78,7 +78,7 @@
   color: white;
 }
 
-/* Estilos atualizados para o popup de vítima */
+
 .victimPopupOverlay {
     position: fixed;
     top: 0;
@@ -97,7 +97,7 @@
     padding: 2.5rem;
     border-radius: 12px;
     width: 90%;
-    max-width: 40rem; /* 40rem como solicitado */
+    max-width: 40rem; 
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -134,7 +134,7 @@
     background-color: #0b7dda;
 }
 
-/* Ajustes para os inputs no popup */
+
 .victimPopup .form input,
 .victimPopup .form select,
 .victimPopup .form textarea {

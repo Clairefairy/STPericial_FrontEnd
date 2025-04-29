@@ -35,7 +35,7 @@
   min-width: 300px;
 }
 
-/* IMAGENS GRANDES (harmonizadas) */
+
 .image,
 .imageFull {
   width: 100%;
@@ -88,7 +88,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* FOTOS DE PERFIL (ajustadas) */
+
 .userPhoto {
   width: 75px;
   height: 75px;
@@ -122,7 +122,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .divUm {
     flex-direction: column;

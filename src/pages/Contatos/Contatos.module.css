@@ -85,7 +85,7 @@
 .inputGroup label {
   display: flex;
   align-items: center;
-  gap: 8px; /* Espaço entre o texto e o ícone */
+  gap: 8px; 
 }
 
 .icon {

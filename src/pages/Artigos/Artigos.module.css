@@ -4,7 +4,7 @@
   background-color: #f9f9f9;
 }
 
-/* Primeira div */
+
 .divTextoImagem {
   display: flex;
   gap: 20px;
@@ -14,19 +14,19 @@
 
 .imageArea {
   flex: 1;
-  max-width: 400px; /* Limita o tamanho da imagem */
+  max-width: 400px; 
 }
 
 .image {
   width: 100%;
   border-radius: 10px;
   object-fit: contain;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adiciona profundidade */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .image:hover {
-  transform: scale(1.05); /* Amplia levemente no hover */
+  transform: scale(1.05); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,10 +43,10 @@
 .textArea p {
   font-size: 18px;
   color: #34495e;
-  line-height: 1.6; /* Melhor espaçamento entre as linhas */
+  line-height: 1.6; 
 }
 
-/* Segunda div */
+
 .divArtigos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -66,7 +66,7 @@
 }
 
 .miniArtigo:hover {
-  transform: translateY(-5px); /* Move levemente para cima no hover */
+  transform: translateY(-5px); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -92,7 +92,7 @@
 
 .expandButton:hover {
   background-color: rgb(28, 90, 55);
-  transform: scale(1.05); /* Botão cresce levemente no hover */
+  transform: scale(1.05); 
 }
 
 .buttonContainer {
@@ -101,15 +101,15 @@
   justify-content: center;
 }
 
-/* Título Notícias */
+
 .tituloNoticias {
   font-size: 28px;
   color: #2c3e50;
   margin-bottom: 20px;
-  text-align: center; /* Centraliza o título */
+  text-align: center; 
 }
 
-/* Terceira div */
+
 .divUltimasNoticias {
   display: flex;
   gap: 20px;
@@ -128,7 +128,7 @@
 }
 
 .noticia:hover {
-  transform: translateY(-5px); /* Elevação sutil no hover */
+  transform: translateY(-5px); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -137,11 +137,11 @@
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
-  transition: transform 0.3s ease; /* Adiciona efeito suave */
+  transition: transform 0.3s ease; 
 }
 
 .noticiaImage:hover {
-  transform: scale(1.1); /* Amplitude leve no hover */
+  transform: scale(1.1); 
 }
 
 .noticiaText h3 {

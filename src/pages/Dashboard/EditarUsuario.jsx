@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import styles from './casodashboard.module.css';
-import UserForm from '../../components/formLaudo/FormularioForm';
+import UserForm from '../../components/FormUsuario/UserForm';
 
 function EditarUsuario() {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
-/* Gerenciamento_casos.module.css */
 
-/* Container Principal */
+
+
 .gerenciamentoCasos {
   padding: 2rem;
   background-color: #fff;
@@ -8,10 +8,10 @@
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
       min-width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* <- aqui! evita scroll horizontal no container */
+  overflow-x: hidden; 
 }
 
-/* Header Section */
+
 .header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -29,7 +29,7 @@
   font-size: 1rem;
 }
 
-/* Botão Adicionar Caso */
+
 .adicionarWrapper {
   margin-top: 1.5rem;
 }
@@ -57,8 +57,8 @@
 }
 
 .table {
-  width: auto; /* Deixa a tabela ocupar o tamanho natural dela */
-  min-width: 100%; /* Mas força no mínimo a ocupar toda a largura disponível */
+  width: auto; 
+  min-width: 100%; 
   border-collapse: collapse;
   font-size: 0.95rem;
 }
@@ -81,7 +81,7 @@
   background-color: #f8f9fa;
 }
 
-/* Botões de Ação */
+
 .actions {
   display: flex;
   gap: 0.5rem;
@@ -125,7 +125,7 @@
   background-color: #27ae60;
 }
 
-/* Loading State */
+
 .loadingContainer {
   display: flex;
   flex-direction: column;
@@ -145,14 +145,14 @@
   to { transform: rotate(360deg); }
 }
 
-/* Error State */
+
 .errorContainer {
   padding: 2rem;
   text-align: center;
   color: #e74c3c;
 }
 
-/* Modal de Confirmação */
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -219,7 +219,7 @@
   background-color: #c0392b;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .gerenciamentoCasos {
     padding: 1rem;

@@ -1,4 +1,4 @@
-/* casodashboard.module.css */
+
 
 .container {
   max-width: 1200px;
@@ -281,7 +281,7 @@
   background-color: #e2e6ea;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .container {
     padding: 1rem;

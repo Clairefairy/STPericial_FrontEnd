@@ -1,18 +1,18 @@
-/* Título da página */
+
 .title {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
-/* Formulário */
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-/* Labels dos campos */
+
 .label {
   font-weight: 500;
   font-size: 1.1rem;
@@ -20,7 +20,7 @@
   flex-direction: column;
 }
 
-/* Campos de entrada */
+
 .form input,
 .form textarea,
 .form select {
@@ -32,13 +32,13 @@
   background-color: white;
 }
 
-/* Área de texto */
+
 .form textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Botões do formulário */
+
 .buttons {
   display: flex;
   justify-content: flex-end;
@@ -46,7 +46,7 @@
   margin-top: 1.5rem;
 }
 
-/* Estilos para os botões */
+
 .buttons button {
   padding: 0.5rem 1rem;
   border: none;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-/* Botão de submit */
+
 .buttons button[type='submit'] {
   background-color: #4caf50;
   color: white;
@@ -66,13 +66,13 @@
   color: white;
 }
 
-/* Botão de cancelamento */
+
 .buttons button[type='button'] {
   background-color: #f44336;
   color: white;
 }
 
-/* Estilo para remover uma evidência */
+
 .removeBtn {
   background-color: #f44336;
   color: white;
@@ -84,7 +84,7 @@
   margin-top: 1rem;
 }
 
-/* Linha separadora entre as evidências */
+
 .separator {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -92,7 +92,7 @@
   border-top: 1px solid #ccc;
 }
 
-/* Botão de adicionar nova evidência */
+
 .addBtn {
   background-color: #4caf50;
   color: white;
@@ -104,7 +104,7 @@
   margin-top: 1.5rem;
 }
 
-/* Caixa que envolve as evidências */
+
 .evidenciaBox {
   padding: 1rem;
   border: 1px solid #ccc;
@@ -112,14 +112,14 @@
   background-color: #f9f9f9;
 }
 
-/* Subtítulo para cada evidência */
+
 .subTitle {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-/* Estilo para a caixa de seleção de "Alterar Arquivo?" */
+
 .labelCheckbox {
   display: flex;
   align-items: center;

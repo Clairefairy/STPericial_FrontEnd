@@ -1,16 +1,16 @@
-/* Dashboard.module.css */
 
-/* Layout geral */
+
+
 .container {
   display: flex;
   height: 100vh;
 }
 
-/* Sidebar fixa à esquerda */
+
 .sidebar {
   width: 250px;
-  background-color: #2c3e50; /* cor de fundo */
-  color: #ecf0f1; /* texto branco */
+  background-color: #2c3e50; 
+  color: #ecf0f1; 
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -25,12 +25,12 @@
 }
 
 .sidebar a:hover {
-  color: #1abc9c; /* cor ao passar o mouse */
+  color: #1abc9c; 
 }
 
-/* Header fixo no topo */
+
 .header {
-  background-color: #f4f6f9; /* cor clara */
+  background-color: #f4f6f9; 
   color: #34495e;
   padding: 15px 20px;
   font-size: 18px;
@@ -40,29 +40,29 @@
   justify-content: space-between;
 }
 
-/* Área principal */
+
 .mainContent {
   flex: 1;
   background-color: #ffffff;
   overflow-y: auto;
 }
 
-/* Área de conteúdo */
+
 .contentArea {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 24px; /* espaçamento vertical */
+  gap: 24px; 
 }
 
-/* Container dos cartões */
+
 .cardContainer {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* permite adaptação em telas menores */
+  flex-wrap: wrap; 
 }
 
-/* Cartões individuais */
+
 .caseCard {
   background-color: #f4f6f9;
   border: 1px solid #dcdde1;
@@ -72,7 +72,7 @@
   flex: 1;
 }
 
-/* Grids para os gráficos */
+
 .chartGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -85,7 +85,7 @@
   }
 }
 
-/* Estilo dos gráficos */
+
 .chart {
   background-color: #ffffff;
   border: 1px solid #dcdde1;

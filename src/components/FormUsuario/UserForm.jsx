@@ -1,50 +1,31 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState } from 'react';
 import styles from './FormularioFormCss.module.css';
 import { AuthContext } from '../../util/UserContext';
-import { cadastrar, atualizar, buscar } from '../../util/service';
+import { cadastrar, atualizar } from '../../util/service';
 import toast from 'react-hot-toast';
 
-export default function UserForm({ onClose, onSubmit, laudoParaEditar }) {
+export default function UserForm({ onClose, onSubmit, usuarioParaEditar }) {
     const { usuario } = useContext(AuthContext);
     const [isLoading, setIsLoading] = useState(false);
-    const [evidencias, setEvidencias] = useState([]);
-    const [loadingEvidencias, setLoadingEvidencias] = useState(false);
 
     const [formData, setFormData] = useState({
-        title: '',
-        description: '',
-        evidence: ''
+        name: '',
+        email: '',
+        role: 'assistente',
+        password: ''
     });
 
-    useEffect(() => {
-        const carregarEvidencias = async () => {
-            setLoadingEvidencias(true);
-            try {
-                await buscar('/evidences', setEvidencias, {
-                    headers: {
-                        Authorization: "Bearer " + usuario.token,
-                    },
-                });
-            } catch (error) {
-                console.error("Erro ao carregar evidências:", error);
-                toast.error("Erro ao carregar evidências");
-            } finally {
-                setLoadingEvidencias(false);
-            }
-        };
-
-        carregarEvidencias();
-    }, [usuario.token]);
-
-    useEffect(() => {
-        if (laudoParaEditar) {
+    // Preenche os dados se for edição
+    useState(() => {
+        if (usuarioParaEditar) {
             setFormData({
-                title: laudoParaEditar.title || '',
-                description: laudoParaEditar.description || '',
-                evidence: laudoParaEditar.evidence || ''
+                name: usuarioParaEditar.name || '',
+                email: usuarioParaEditar.email || '',
+                role: usuarioParaEditar.role || 'assistente',
+                password: '' // Não preenchemos a senha por segurança
             });
         }
-    }, [laudoParaEditar]);
+    }, [usuarioParaEditar]);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -55,36 +36,36 @@ export default function UserForm({ onClose, onSubmit, laudoParaEditar }) {
         e.preventDefault();
         setIsLoading(true);
 
-        const dadosParaEnviar = {
-            ...formData,
-            expertResponsible: usuario.user.id
-        };
+        // Verifica se é uma edição e se a senha foi alterada
+        const dadosParaEnviar = usuarioParaEditar
+            ? {
+                ...formData,
+                ...(formData.password ? {} : { password: undefined }) // Remove a senha se não foi alterada
+            }
+            : formData;
 
         try {
-            let resposta;
-            if (laudoParaEditar) {
-                resposta = await atualizar(`/reports/${laudoParaEditar._id}`, dadosParaEnviar, null, {
+            if (usuarioParaEditar) {
+                await atualizar(`/users/${usuarioParaEditar._id}`, dadosParaEnviar, null, {
                     headers: {
                         Authorization: "Bearer " + usuario.token,
                     },
                 });
-                toast.success("Laudo editado com sucesso!");
-                if (onSubmit) onSubmit();
+                toast.success("Usuário atualizado com sucesso!");
             } else {
-                resposta = await cadastrar('/reports', dadosParaEnviar, null, {
+                await cadastrar('/users', dadosParaEnviar, null, {
                     headers: {
                         Authorization: "Bearer " + usuario.token,
                     },
                 });
-                toast.success("Laudo criado com sucesso!");
-                if (onSubmit) onSubmit();
+                toast.success("Usuário criado com sucesso!");
             }
+
+            if (onSubmit) onSubmit();
             onClose();
         } catch (e) {
-            console.error("Erro ao salvar laudo:", e);
-            toast.error("Ocorreu um erro ao salvar o laudo!");
-            toast.error(e.response?.data?.message || "Ocorreu um erro ao salvar o laudo!");
-
+            console.error("Erro ao salvar usuário:", e);
+            toast.error(e.response?.data?.message || "Ocorreu um erro ao salvar o usuário!");
         } finally {
             setIsLoading(false);
         }
@@ -92,18 +73,18 @@ export default function UserForm({ onClose, onSubmit, laudoParaEditar }) {
 
     return (
         <div className={styles.popup}>
-            <h2 className={styles.title}>{laudoParaEditar ? 'Editar Laudo' : 'Criar Novo Laudo'}</h2>
+            <h2 className={styles.title}>{usuarioParaEditar ? 'Editar Usuário' : 'Criar Novo Usuário'}</h2>
 
             <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.fieldGroup}>
                     <label className={styles.label}>
-                        Título do Laudo*
-                        <input 
-                            name="title" 
-                            value={formData.title} 
-                            onChange={handleChange} 
-                            required 
-                            placeholder="Digite o título do laudo"
+                        Nome Completo*
+                        <input
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Digite o nome do usuário"
                             className={styles.input}
                         />
                     </label>
@@ -111,59 +92,65 @@ export default function UserForm({ onClose, onSubmit, laudoParaEditar }) {
 
                 <div className={styles.fieldGroup}>
                     <label className={styles.label}>
-                        Descrição Detalhada*
-                        <textarea 
-                            name="description" 
-                            value={formData.description} 
-                            onChange={handleChange} 
-                            required 
-                            minLength={10} 
-                            placeholder="Descreva os detalhes do laudo"
-                            className={styles.textarea}
+                        E-mail*
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="Digite o e-mail do usuário"
+                            className={styles.input}
                         />
                     </label>
                 </div>
 
                 <div className={styles.fieldGroup}>
                     <label className={styles.label}>
-                        Evidência Relacionada*
-                        {loadingEvidencias ? (
-                            <p>Carregando evidências...</p>
-                        ) : (
-                            <select
-                                name="evidence"
-                                value={formData.evidence}
-                                onChange={handleChange}
-                                required
-                                className={styles.select}
-                            >
-                                <option value="">Selecione uma evidência</option>
-                                {evidencias.map((evidencia) => (
-                                    <option key={evidencia._id} value={evidencia._id}>
-                                        {`${evidencia.type} - ${evidencia.text || 'Sem descrição'} (${new Date(evidencia.collectionDate).toLocaleDateString()})`}
-                                    </option>
-                                ))}
-                            </select>
-                        )}
+                        Cargo*
+                        <select
+                            name="role"
+                            value={formData.role}
+                            onChange={handleChange}
+                            required
+                            className={styles.select}
+                        >
+                            <option value="assistente">Assistente</option>
+                            <option value="perito">Perito</option>
+                            <option value="admin">Administrador</option>
+                        </select>
                     </label>
                 </div>
 
                 <div className={styles.fieldGroup}>
-                    <p className={styles.readOnlyField}>
-                        Perito Responsável: <strong>{usuario.user.name}</strong>
-                    </p>
+                    <label className={styles.label}>
+                        {usuarioParaEditar ? 'Nova Senha' : 'Senha*'}
+                        <input
+                            type="password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required={!usuarioParaEditar}
+                            placeholder={usuarioParaEditar ? "Deixe em branco para manter a atual" : "Digite a senha"}
+                            className={styles.input}
+                            minLength={6}
+                        />
+                        {usuarioParaEditar && (
+                            <small className={styles.hint}>Deixe em branco para manter a senha atual</small>
+                        )}
+                    </label>
                 </div>
 
                 <div className={styles.buttons}>
-                    <button 
-                        type="submit" 
-                        disabled={isLoading || loadingEvidencias}
+                    <button
+                        type="submit"
+                        disabled={isLoading}
                         className={styles.submitButton}
                     >
-                        {isLoading ? "Salvando..." : (laudoParaEditar ? "Atualizar Laudo" : "Criar Laudo")}
+                        {isLoading ? "Salvando..." : (usuarioParaEditar ? "Atualizar Usuário" : "Criar Usuário")}
                     </button>
-                    <button 
-                        type="button" 
+                    <button
+                        type="button"
                         onClick={onClose}
                         className={styles.cancelButton}
                         disabled={isLoading}
