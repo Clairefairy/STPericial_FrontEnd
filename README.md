@@ -7,7 +7,7 @@
     </h1>
 </div>
 
-<p align="center">Este repositório equivale ao Frontend do sistema de Perícias Odontológicas STPericial, desenvolvido para facilitar a gestão, visualização e solicitação de perícias na área odontológica. Equivale à primeira entrega do Projeto Integrador do semestre de 2025.1 da Turma TADS033 da Faculdade Senac Recife.<br />
+<p align="center">Este repositório equivale ao Frontend do sistema de Perícias Odontológicas STPericial, aplicativo PWA desenvolvido para fazer registros de casos de periciais com evidências, geração de laudos, entre outros. Equivale à primeira entrega do Projeto Integrador do semestre de 2025.1 da Turma TADS033 da Faculdade Senac Recife.<br />
 O código foi construído com React, utilizando o Vite para otimizar a performance do build e do ambiente de desenvolvimento. O deploy do front foi feito através do Netlify e pode ser encontrado no link https://stpericial.netlify.app/<br><br></p>
 
 ## 🚀 Tecnologias Utilizadas
