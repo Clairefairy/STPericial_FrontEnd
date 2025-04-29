@@ -7,8 +7,8 @@
     </h1>
 </div>
 
-Este repositório equivale ao Frontend do sistema de Perícias Odontológicas **STPericial**, desenvolvido para facilitar a gestão, visualização e solicitação de perícias na área odontológica. Equivale à primeira entrega do Projeto Integrador do semestre de 2025.1 da Turma TADS033 da Faculdade Senac Recife.  
-O código foi construído com **React**, utilizando o **Vite** para otimizar a performance do build e do ambiente de desenvolvimento.<br>
+<p align="center">Este repositório equivale ao Frontend do sistema de Perícias Odontológicas STPericial, desenvolvido para facilitar a gestão, visualização e solicitação de perícias na área odontológica. Equivale à primeira entrega do Projeto Integrador do semestre de 2025.1 da Turma TADS033 da Faculdade Senac Recife.<br />
+O código foi construído com React, utilizando o Vite para otimizar a performance do build e do ambiente de desenvolvimento. O deploy do front foi feito através do Netlify e pode ser encontrado no link https://stpericial.netlify.app/<br><br></p>
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -16,7 +16,7 @@ O código foi construído com **React**, utilizando o **Vite** para otimizar a p
 <br>![React](https://img.shields.io/badge/react-purple?style=for-the-badge&logo=react)<br>![JavaScript](https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript)<br>![Vite](https://img.shields.io/badge/vite-lightblue?style=for-the-badge&logo=vite)<br><br>
 - **📚 Bibliotecas**:<br>![ReactRouter](https://img.shields.io/badge/react%20router-white?style=for-the-badge&logo=reactrouter)<br>![Axios](https://img.shields.io/badge/axios-70708e?style=for-the-badge&logo=axios)<br>
 
-## 📦 Como executar o projeto
+## ▶️ Como executar o projeto
 
 ### Pré-requisitos
 
@@ -50,7 +50,7 @@ A aplicação estará disponível em: [http://localhost:5173](http://localhost:5
 
 ---
 
-## 🛠 Estrutura de Pastas (Exemplo)
+## 📁 Estrutura de Pastas
 
 ```bash
 STPericial_FrontEnd/
