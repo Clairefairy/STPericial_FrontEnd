@@ -3,7 +3,7 @@ import Navbar from "../../components/Header";
 import Footer from "../../components/Footer";
 import Container from "../../components/Container";
 import styles from "./Artigos.module.css";
-import Modal from "../../components/Modal/modal";
+import Modal from "../../components/Modal/Modal";
 
 import reconhecimento_de_padroes from "../../assets/Reconhecimento de Padrões com Odontometria.png";
 import Automatização_Processo_Laudos from "../../assets/Automatização no Processo de Laudos.png";
