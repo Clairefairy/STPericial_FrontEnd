@@ -26,7 +26,7 @@ O código foi construído com **React**, utilizando o **Vite** para otimizar a p
    ```
 2. Acesse o diretório do projeto:
    ```bash
-   cd destino
+   cd SRC
    ```
 3. Instale as dependências:
    ```bash
