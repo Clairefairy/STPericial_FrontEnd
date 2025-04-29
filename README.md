@@ -13,7 +13,8 @@ O código foi construído com React, utilizando o Vite para otimizar a performan
 ## 🚀 Tecnologias Utilizadas
 
 - **</> Linguagens de Programação**:
-<br>![React](https://img.shields.io/badge/react-purple?style=for-the-badge&logo=react)<br>![JavaScript](https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript)<br>![Vite](https://img.shields.io/badge/vite-lightblue?style=for-the-badge&logo=vite)<br><br>
+<br>![HTML](https://img.shields.io/badge/HTML-bcccce?style=for-the-badge&logo=HTML5)<br>![CSS](https://img.shields.io/badge/CSS-8e7e77?style=for-the-badge&logo=CSS3)<br>![React](https://img.shields.io/badge/react-purple?style=for-the-badge&logo=react)<br>![JavaScript](https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript)<br><br>
+- **🛠️ Build Tool**:<br>![Vite](https://img.shields.io/badge/vite-lightblue?style=for-the-badge&logo=vite)<br><br>
 - **📚 Bibliotecas**:<br>![ReactRouter](https://img.shields.io/badge/react%20router-white?style=for-the-badge&logo=reactrouter)<br>![Axios](https://img.shields.io/badge/axios-70708e?style=for-the-badge&logo=axios)<br>
 
 ## ▶️ Como executar o projeto
@@ -71,13 +72,13 @@ STPericial_FrontEnd/
 ## 🎯 Funcionalidades Principais
 
 - O projeto inclui 3 tipos de usuários (Admin, Perito e Assistente), cada qual com suas devidas permissões.
-- Gerenciamentos de Usuários
-- Gerenciamento de Casos
-- Upload de evidências
-- Criação de registros odontológicos
+- Gerenciamentos de Usuários (Admin)
+- Gerenciamento de Casos (Perito+)
+- Upload de evidências (Todos)
+- Criação de registros odontológicos (Perito+)
 - Dashboard com visão geral da distribuição de casos do usuário
 
-## 👨‍💻 Equipe
+## 👥 Equipe
 
 - **Clara Félix** — [@Clairefairy](https://github.com/Clairefairy)
 - **Felipe Pimentel** — [@fpPimentel](https://github.com/fpPimentel)
