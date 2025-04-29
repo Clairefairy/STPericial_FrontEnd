@@ -73,7 +73,7 @@ STPericial_FrontEnd/
 - Criação de registros odontológicos
 - Dashboard com visão geral da distribuição de casos do usuário
 
-## 👨‍💻 Desenvolvedores
+## 👨‍💻 Equipe
 
 - **Clara Félix** — [@Clairefairy](https://github.com/Clairefairy)
 - **Felipe Pimentel** — [@seu-usuario](https://github.com/seu-usuario)
