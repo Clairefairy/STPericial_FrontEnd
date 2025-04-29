@@ -20,8 +20,7 @@ O código foi construído com React, utilizando o Vite para otimizar a performan
 
 ### Pré-requisitos
 
-- [Node.js](https://nodejs.org/) (versão recomendada: 18+)
-- [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/)
 
 ### Instalação
 
