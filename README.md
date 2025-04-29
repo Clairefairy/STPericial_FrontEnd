@@ -1,15 +1,18 @@
-# 🦷 STPericial - Frontend
+<div align="center">
+    <h1>
+       <img src="https://i.imgur.com/nIzsvvc.png" /><br>
+        <b font-size: 20px;>STPericial - Frontend</b>
+        </br>
+        </br>
+    </h1>
+</div>
 
 Este repositório equivale ao Frontend do sistema de Perícias Odontológicas **STPericial**, desenvolvido para facilitar a gestão, visualização e solicitação de perícias na área odontológica. Equivale à primeira entrega do Projeto Integrador do semestre de 2025.1 da Turma TADS033 da Faculdade Senac Recife.  
-O código foi construído com **React**, utilizando o **Vite** para otimizar a performance do build e do ambiente de desenvolvimento.
+O código foi construído com **React**, utilizando o **Vite** para otimizar a performance do build e do ambiente de desenvolvimento.<br>
 
-## 🚀 Tecnologias Utilizadas
+## </> Linguagens e Tecnologias Utilizadas
 
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [React Router](https://reactrouter.com/)
-- [Axios](https://axios-http.com/)
+<br>![React](https://img.shields.io/badge/react-purple?style=for-the-badge&logo=react)<br>![JavaScript](https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript)<br>![Vite](https://img.shields.io/badge/vite-lightblue?style=for-the-badge&logo=vite)<br>![ReactRouter](https://img.shields.io/badge/react%20router-white?style=for-the-badge&logo=reactrouter)<br>![Axios](https://img.shields.io/badge/axios-70708e?style=for-the-badge&logo=axios)
 
 ## 📦 Como executar o projeto
 
@@ -76,7 +79,7 @@ STPericial_FrontEnd/
 ## 👨‍💻 Equipe
 
 - **Clara Félix** — [@Clairefairy](https://github.com/Clairefairy)
-- **Felipe Pimentel** — [@fpPrazeres](https://github.com/fpPrazeres)
+- **Felipe Pimentel** — [@seu-usuario](https://github.com/seu-usuario)
 - **Rebeca Lyra** — [@RebecaLyra](https://github.com/RebecaLyra)
 - **Ricardo Tompson** — [@RicardoTompson](https://github.com/RicardoTompson)
 - **Tales Machado** — [@TalesMachadoBandeira](https://github.com/TalesMachadoBandeira)
