@@ -17,6 +17,8 @@ O código foi construído com React, utilizando o Vite para otimizar a performan
 - **🛠️ Build Tool**:<br>![Vite](https://img.shields.io/badge/vite-lightblue?style=for-the-badge&logo=vite)<br><br>
 - **📚 Bibliotecas**:<br>![ReactRouter](https://img.shields.io/badge/react%20router-white?style=for-the-badge&logo=reactrouter)<br>![Axios](https://img.shields.io/badge/axios-70708e?style=for-the-badge&logo=axios)<br>
 
+<br>
+
 ## ▶️ Como executar o projeto
 
 ### Pré-requisitos
@@ -47,27 +49,8 @@ npm run dev
 ```
 
 A aplicação estará disponível em: [http://localhost:5173](http://localhost:5173)
+<br><br>
 
----
-
-## 📁 Estrutura de Pastas
-
-```bash
-STPericial_FrontEnd/
-├── public/          # Arquivos públicos, como ícones e imagens estáticas
-├── src/             # Código-fonte principal do frontend
-│   ├── assets/      # Imagens, ícones e recursos estáticos
-│   ├── components/  # Componentes reutilizáveis da interface
-│   ├── pages/       # Páginas principais do site
-│   └── util/        # Funções utilitárias e helpers
-├── .gitignore       # Arquivos e pastas ignorados pelo Git
-├── index.html       # Página HTML principal
-├── package.json     # Gerenciamento de dependências e scripts
-├── vite.config.js   # Configuração do Vite
-└── README.md        # Documentação do projeto
-```
-
----
 
 ## 🎯 Funcionalidades Principais
 
@@ -77,6 +60,8 @@ STPericial_FrontEnd/
 - Upload de evidências (Todos)
 - Criação de registros odontológicos (Perito+)
 - Dashboard com visão geral da distribuição de casos do usuário
+<br>
+
 
 ## 👥 Equipe
 
@@ -87,5 +72,5 @@ STPericial_FrontEnd/
 - **Tales Machado** — [@TalesMachadoBandeira](https://github.com/TalesMachadoBandeira)
 - **Walison Brandão** — [@brandaowalison](https://github.com/brandaowalison)
 
----
+
 
