@@ -2,7 +2,7 @@
 import Navbar from "../../components/Header";
 import Footer from "../../components/Footer";
 import Container from "../../components/Container";
-import styles from "./Gerenciamento_casos.module.css";
+import styles from "./Gerenciamento_Casos.module.css";
 import { useContext, useEffect, useState } from "react";
 import { buscar, deletar } from "../../util/service";
 import { AuthContext } from "../../util/UserContext";
