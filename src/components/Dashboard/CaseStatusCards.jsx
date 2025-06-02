@@ -6,7 +6,8 @@ const Card = ({ label, value, color }) => (
 );
 
 const CaseStatusCards = ({ casos }) => {
-  const counts = casos.reduce((acc, caso) => {
+  const safeCasos = Array.isArray(casos) ? casos : [];
+  const counts = safeCasos.reduce((acc, caso) => {
     if (caso.status === "em_andamento") {
       acc.emAndamento += 1;
     } else if (caso.status === "finalizado") {

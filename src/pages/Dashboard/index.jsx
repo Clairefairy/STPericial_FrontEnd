@@ -3,10 +3,6 @@ import Header from "../../components/layout/Header";
 import Container from "../../components/layout/Container";
 import styles from "./Dashboard.module.css";
 
-import WelcomeMessage from "../../components/Dashboard/WelcomeMessage";
-import CaseStatusCards from "../../components/Dashboard/CaseStatusCards";
-import WeeklyActivityChart from "../../components/Dashboard/WeeklyActivityChart";
-import CaseDurationChart from "../../components/Dashboard/CaseDurationChart";
 import { Navigate, Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../util/UserContext";
