@@ -63,12 +63,24 @@ function Login() {
 
   const handleForm = async (e) => {
     e.preventDefault();
+    // E manter a validação no handleForm
+const handleForm = async (e) => {
+  e.preventDefault();
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    toast.error("Por favor, insira um endereço de email válido");
+    return;
+  }
+
+};
    const isLogado = await handleLogin(formData)
       if(isLogado){
         navigate("/dashboard")
       }
     
   };
+  
 
   return (
     <>
@@ -95,6 +107,8 @@ function Login() {
                   Icon={FiUser}
                   value={formData.email}
                   onChange={handleChange}
+                  pattern="[^@\s]+@[^@\s]+\.[^@\s]+"  // Adiciona validação HTML5
+                  title="Por favor, insira um endereço de email válido"
                 />
 
                 <FormInput
@@ -109,13 +123,7 @@ function Login() {
                 />
 
                 <div className={styles.optionsRow}>
-                  <label className={styles.rememberMe}>
-                    <input type="checkbox" />
-                    Lembre-se de mim
-                  </label>
-                  <a href="#" className={styles.forgotPassword}>
-                    Esqueceu sua senha?
-                  </a>
+                 
                 </div>
 
                 <button type="submit" className={styles.loginButton}>
@@ -123,17 +131,11 @@ function Login() {
                 </button>
               </form>
 
-              <p className={styles.signupText}>
-                Não tem uma conta? <a href="#">Inscrever-se</a>
-              </p>
+            
 
               <div className={styles.socialLogin}>
-                <p>Ou logar com:</p>
-                <div className={styles.socialIcons}>
-                  <SocialButton Icon={FaFacebookF} className={styles.facebook} />
-                  <SocialButton Icon={FaGoogle} className={styles.google} />
-                  <SocialButton Icon={FaApple} className={styles.apple} />
-                </div>
+               
+                
               </div>
             </div>
           </div>
